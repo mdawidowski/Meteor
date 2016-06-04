@@ -1,55 +1,23 @@
 <head>
-  <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,500italic&subset=latin,latin-ext" rel="stylesheet">
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-  <title>Kalambury</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+  <title>Techniki Internetowe 2015/2016</title>
+
+  <link href="./bootstrap.min.css" rel="stylesheet">
+  <link href="./jumbotron.css" rel="stylesheet">
+  <link href="./main.css" rel="stylesheet">
 </head>
 
-<body>
-  <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainmenu" aria-exanded="false">
-            <span class="sr-only"> Przełącznik nawigacji</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">
-            <strong>Kalambury</strong>
-          </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-right mainmenu" id="mainmenu">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Start</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Więcej</a></li>
-          </ul>
-        </div>
-      </div>
-  </nav>
-  <div class="container-fluid main-photo">
-    <div class="row">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-8 caption">
-            <div id="login">
-            <h1>Witaj w grze Kalambury!</h1>
-            <p>Wprowadź poniżej nazwę gracza i rozpocznij rozgrywkę</p>
-            <div id="panel" ng>
-            <form>
-              <label for="username">Nazwa użytkownika:</label>
-              <input type="text" id="username" name="username">
-              <div class="canvasDiv">
-                <input type="submit" value="Rozpocznij grę">
-              </div>
-            </form>
-            <canvas id="drawing" width="490" height="220"></canvas>
-            <div id="canvasDiv"></div>
-          </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<body role="document">
+
+      {{> gra}}
+
 </body>
+
+<template name="gra">
+  <div id="pojemnik">
+  <div class="col-md-6" id="plansza">
+    <center><h2> {{pokazhaslo}} </h2></center>
+  </div>
+  <div> {{{ literki }}} </div>
+</div>
+</template>
